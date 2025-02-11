@@ -14,8 +14,11 @@ class usernameController{
     public function guardar($nombre){
         $id = $this->model->insertar($nombre);
         return($id!=false) ? header("Location:show.php?id=".$id) : header("Location:create.php");
-
     
+    }
+    public function show($id){
+        return ($this->model->show($id) !=false) ? $this->model->show($id): header ("Location:index.php");
+
     }
 
 }

@@ -6,6 +6,4 @@
  $obj->guardar($_POST["nombre"]);
 
 
-
-
 ?>
