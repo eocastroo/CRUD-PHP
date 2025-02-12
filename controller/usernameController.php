@@ -21,6 +21,11 @@ class usernameController{
 
     }
 
+    public function index(){
+        return($this->model->index())? $this->model->index(): false;
+
+    }
+
 }
 
 ?>
