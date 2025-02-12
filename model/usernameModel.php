@@ -28,6 +28,12 @@ class usernameModel{
     $stament = $this->PDO->prepare("SELECT * FROM username");
     return ($stament->execute()) ? $stament->fetchAll(): false; 
   }
-}
 
+  public function upate($id,$nombre){
+    $stament = $this->PDO->prepare("UPDATE username SET nombre= :nombre where id = :id");
+    $stament->bindParam(":nombre",$nombre);
+    $stament->bindParam(":id",$id);
+    return ($stament->execute()) ? $id : false;
+  }
+}
 ?>
