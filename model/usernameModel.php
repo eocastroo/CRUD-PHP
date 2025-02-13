@@ -29,7 +29,7 @@ class usernameModel{
     return ($stament->execute()) ? $stament->fetchAll(): false; 
   }
 
-  public function upate($id,$nombre){
+  public function update($id,$nombre){
     $stament = $this->PDO->prepare("UPDATE username SET nombre= :nombre where id = :id");
     $stament->bindParam(":nombre",$nombre);
     $stament->bindParam(":id",$id);
