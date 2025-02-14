@@ -37,7 +37,7 @@ class usernameModel{
   }
 
   public function delete($id){
-    $stament= $this->PDO->prepare("DELETE username  WHERE id=:id");
+    $stament= $this->PDO->prepare("DELETE FROM username  WHERE id=:id");
     $stament->bindParam(":id",$id);
     return($stament->execute()) ? true :false;
 

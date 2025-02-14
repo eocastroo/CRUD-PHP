@@ -43,7 +43,7 @@ $rows = $obj->index();
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
-                    <a href="delete.php?id=<?= $date[0] ?>" class="btn btn-danger">Eliminar</a>
+                    <a href="delete.php?id=<?= $row[0] ?>" class="btn btn-danger">Eliminar</a>
                   </div>
                 </div>
               </div>
@@ -54,7 +54,7 @@ $rows = $obj->index();
     <?php else: ?>
 
       <tr>
-        <td colspan="3" class="text-center">No hay registro</td>
+        <td colspan="3" class="text-center">No hay registros en la BD..</td>
       </tr>
 
     <?php endif; ?>
